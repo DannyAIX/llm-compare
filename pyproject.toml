@@ -1,0 +1,27 @@
+[project]
+name = "llm-compare"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Danny Palacios", email = "dannyux@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.5.2",
+    "langchain-google-genai>=4.5.2",
+    "langchain-groq>=1.2.1",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+llm-compare = "llm_compare:main"
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.6",
+]
